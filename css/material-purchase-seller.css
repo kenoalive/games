@@ -1,0 +1,94 @@
+.content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.m-tit{
+	width: 100%;
+	background-color: #f5f5f5;
+	margin-bottom: 20px;
+}
+.flex-center{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content:center;
+	-ms-align-items: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.m-tit-con{
+	float: left;
+	height: 40px;
+	font-size: 15px;
+	color: #5a5a5a;
+}
+.list-wrapper{
+	display: inline-block;
+}
+.list1{width: 143px;}
+.list2{width: 128px;}
+.list3{width: 154px;}
+.list4{width: 159px;}
+.list5{width: 114px;}
+.list6{width: 110px;}
+.m-body-con{
+	float: left;
+	height: 56px;
+	color: #5a5a5a;
+	font-size: 15px;
+}
+.tit-body{
+	width: 100%;
+}
+.tit-body:nth-child(odd){
+	background-color: #fff;
+}
+.tit-body:nth-child(even){
+	background-color: #f5f5f5;
+}
+.m-num{
+	width: 110px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 5px;
+	text-align: center;
+}
+.tit-body:nth-child(odd) .m-num{
+	background-color: #f5f5f5;
+}
+.tit-body:nth-child(even) .m-num{
+	background-color: #fff;
+}
+.m-wrapper{
+	display: inline-block;
+	width: 800px;
+	margin: 0 auto;
+	text-align: right;
+}
+.total{
+	display: block;
+	margin-top: 90px;
+	margin-right: 5px;
+	font-size: 22px;
+	color: #c90000;
+	/*font-weight: bold;*/
+}
+.sellBtn{
+	margin-top: 20px;
+	float: right;
+	height: 43px;
+	width: 145px;
+	background-color: #699ae0;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 43px;
+	cursor: pointer;
+	border-radius: 21px;
+}

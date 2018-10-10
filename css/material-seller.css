@@ -1,0 +1,111 @@
+.content{
+	width: 100%;
+}
+.seller{
+	width: 1130px;
+	margin: 25px 30px;
+}
+.seller-list{
+	width: 1120px;
+}
+.seller-con{
+	float: left;
+	height: 158px;
+	width: 410px;
+	margin: 0px 75px;
+	margin-top: 20px;
+	padding: 23px 0px;
+}
+.seller-info{
+	padding-left: 14px;
+}
+.seller-img{
+	width: 95px;
+	height: 95px;
+	/*margin: 31px 0px;*/
+}
+.seller-img img{
+	width: 100%;
+}
+.seller-name a{
+	display: block;
+	font-size: 17px;
+	color: #267ae1;
+}
+.seller-service{
+	margin-top: 15px;
+	font-size:15px;
+	color: #787878;
+	margin-right: 55px; 
+
+}
+.seller-service .s-num{
+	color: #267ae1;
+
+}
+.like-list{
+	margin-left: 40px;
+}
+.like{
+	float: left;
+	width: 27px;
+	height: 25px;
+	background: url(../images/like.png) no-repeat;
+	background-size: 100%;
+	margin: 0 4px;
+}
+.deal-percent{
+	font-size:15px;
+	color: #787878;
+	margin-top: 15px;
+}
+.speed{
+	margin-left: 20px;
+}
+.page-w{
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+}
+.page{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 240px;
+}
+.page .active a{
+	color: #b6b6b6;
+}
+.back{
+	display: inline-block;  
+	border-left: 2px solid;
+	border-bottom: 2px solid;  
+	width: 10px; 
+	height: 10px;  
+	transform: rotate(45deg); 
+}
+.next{
+	display: inline-block;  
+	border-left: 2px solid;
+	border-bottom: 2px solid;  
+	width: 10px; 
+	height: 10px;  
+	transform: rotate(225deg);  
+}
+.page-num {
+	padding: 0 20px;
+	
+}
+.page-num li{
+	float: left;
+	margin: 0 8px;
+	font-size: 18px;
+	color: #666666;
+}
+.page-num li a{
+	color: #666666;
+
+}

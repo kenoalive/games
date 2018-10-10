@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />  
+	<meta name="keywords" content=" " />  
+	<meta name="description" content=" " />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/center.css">
+	<script src="js/jquery-1.8.1.min.js"></script>
+	<!-- <script src="js/Popt.js"></script>
+	<script src="js/cityJson.js"></script>
+	<script src="js/citySet.js"></script> -->
+	<script src="js/center.js"></script>
+	<title>个人中心</title>
+</head>
+<body>
+	<!-- 顶部导航 -->
+	<div class="header">
+		<div class="wrapper clearfix">
+			<ul class="nav">
+				<li><a href="">首页</a></li>
+				<li><a target="_blank" href="account-deal.html">账号交易</a></li>
+				<li><a target="_blank" href="account-purchase.html">账号求购</a></li>
+				<li><a target="_blank" href="material-deal.html">材料交易</a></li>
+				<li><a target="_blank" href="material-purchase.html">材料求购</a></li>
+				<li><a target="_blank" href="">金币交易</a></li>
+				<li><a target="_blank" href="">二手电脑</a></li>
+			</ul>
+
+			<div class="user-info">
+				
+				<!-- 我的订单 -->
+				<div class="register">
+					<a href=""><p>免费注册</p></a>
+				</div>
+				<div class="login">
+					<a href=""><p>登录</p></a>
+				</div>
+				<div class="order">
+					<a href=""><p>个人中心</p></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 个人中心 -->
+	<div class="content clearfix">
+		<div class="wrapper clearfix">
+			<!-- 侧边栏 -->
+			<div class="sidebar fl">
+				<!-- 用户信息 -->
+				<div class="user-card">
+					<div class="user-profile fl">
+						<img src="images/icon/profile.png" alt="">
+					</div>
+					<div class="user-name fl">
+						1475304386@qq.com
+					</div>
+				</div>
+				<!-- 用户账户信息 -->
+				<div class="account-card fl">
+					<div class="a-amount ainfo">
+						<span>账户资金：&nbsp;</span><span>0.00</span><span>元</span>
+					</div>
+					<div class="a-amount ainfo">
+						<span>可用资金：&nbsp;</span><span>0.00</span><span>元</span>
+					</div>
+					<div class="a-amount ainfo">
+						<span>冻结资金：&nbsp;</span><span>0.00</span><span>元</span>
+					</div>
+					<a href=""><div class="a-btn charge">我要充值</div></a>
+					<a href=""><div class="a-btn withdrawal">我要提现</div></a>
+				</div>
+				<!-- 功能列表 -->
+				<div class="sidebar-list fr">
+					<ul class="clearfix">
+						<li class="order-center list-type1 fl">
+							<div class="list-title">
+								<div class="tri tri-open fl"></div>
+								<div class="title-con">订单中心</div>
+							</div>
+							<ul class="list-con">
+								<li class="list-type2 active" index="0">
+									我的订单
+								</li>
+								<li class="list-type2" index="1">
+									求购管理
+								</li>
+								<li class="list-type2" index="2">
+									售卖管理
+								</li>
+								
+							</ul>
+						</li>
+						<li class="order-center list-type1 fl">
+							<div class="list-title">
+								<div class="tri tri-open fl"></div>
+								<div class="title-con">财务管理</div>
+							</div>
+							<ul class="list-con">
+								<li class="list-type2" index="3">
+									资金明细
+								</li>
+								<li class="list-type2" index="4">
+									提现记录
+								</li>
+								<li class="list-type2" index="5">
+									充值记录
+								</li>
+							</ul>
+						</li>
+						<li class="order-center list-type1 fl">
+							<div class="list-title">
+								<div class="tri tri-open fl"></div>
+								<div class="title-con">安全中心</div>
+							</div>
+							<ul class="list-con">
+								<li class="list-type2" index="6">
+									修改登录密码
+								</li>
+								<li class="list-type2" index="7">
+									修改支付密码
+								</li>
+								<li class="list-type2" index="8">
+									修改绑定手机
+								</li>
+							</ul>
+						</li>
+						<div class="list-type2 title-con auth" index="9">商家认证</div>
+					</ul>
+				</div>
+			</div>
+			<!-- 右边主内容 -->
+			<div class="center-con fr">
+				<!-- 我的订单 -->
+				<div class="order-list panel" style="display:block;">
+					<!-- 订单标题 -->
+					<div class="center-list-title fl">
+						<div class="list-title-top m-order fl list-text active">
+							材料订单
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text">
+							账号订单
+							<div class="white-line"></div>
+						</div>
+						
+						<div class="list-title-bottom fl list-text">
+							<!-- 材料订单列表头 -->
+							<div class="m-list-tit list-tit fl " >
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									库存
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									客服服务
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									订单状态
+								</div>
+							</div>
+							<!-- 账号订单列表头 -->
+							<div class="a-list-tit list-tit fl" style="display: none;">
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									库存
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									短信状态
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									绑定电话
+								</div>
+								<div class="list-tit-type6 list-tit-type">
+									客服服务
+								</div>
+								<div class="list-tit-type7 list-tit-type">
+									订单状态
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 订单内容 -->
+					<div class="order-list-content fl">
+						<!-- 材料订单内容 -->
+						<div class="m-order-con fl" >
+							<div class="btn-tab-w">
+								<div class="m-btn active">材料订单</div>
+								<div class="m-btn">账号订单</div>
+								<div class="m-btn">成功订单</div>
+								<div class="m-btn">代发货</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info">
+
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+											<div class="order-number o-text">
+												<span>创建时间</span><span>2018-4-25-18:00</span>
+
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f lo-text">
+												短信发送成功
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												<div class="list-btn binding">
+													绑定手机号
+												</div>
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f o-text2">
+												<span>代发货</span>
+											</div>
+										</div>
+
+									</li>
+									<li class="item-order">
+										<div class="item-order-info">
+
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+											<div class="order-number o-text">
+												<span>创建时间</span><span>2018-4-25-18:00</span>
+
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f lo-text">
+												短信发送成功
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												<div class="list-btn">
+													绑定手机号
+												</div>
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f o-text2">
+												<span>代发货</span>
+											</div>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- 账号订单内容 -->
+						<div class="a-order-con" style="display: none;">
+							<div class="a-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info">
+
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+											<div class="order-number o-text">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+
+											</div>
+										</div>
+										<div class="order-detail fl a-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f lo-text">
+												短信发送成功
+											</div>
+											<div class="list-tit-type5 fl list-c-s list-f o-text2">
+												<div class="list-btn">
+													绑定手机号
+												</div>
+											</div>
+											<div class="list-tit-type6 fl list-c-s list-f o-text2">
+												<div class="list-btn">
+													客服服务
+												</div>
+											</div>
+											<div class="list-tit-type7 fl list-c-s list-f o-text2">
+												代发货
+											</div>
+										</div>
+
+									</li>
+									<li class="item-order">
+										<div class="item-order-info">
+
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+											<div class="order-number o-text">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+
+											</div>
+										</div>
+										<div class="order-detail fl a-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f lo-text">
+												短信发送成功
+											</div>
+											<div class="list-tit-type5 fl list-c-s list-f o-text2">
+												<div class="list-btn">
+													绑定手机号
+												</div>
+											</div>
+											<div class="list-tit-type6 fl list-c-s list-f o-text2">
+												<div class="list-btn">
+													客服服务
+												</div>
+											</div>
+											<div class="list-tit-type7 fl list-c-s list-f o-text2">
+												代发货
+											</div>
+										</div>
+
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 翻页 -->
+					<div class="page">
+						<div class="back page-btn fl">上一页</div>
+						<input type="text" name="" id="page" value="1">
+						<div class="next page-btn fl">下一页</div>
+					</div>
+				</div>
+				<!-- 手机绑定卖家 -->
+				<div class="binding-seller binding-panel" style="display: none;">
+					<div class="topTit">
+						<span>订单编号213124124</span>
+						<span>创建时间：2018-3-21</span>
+						<div class="text-r">替换手机号</div>
+					</div>
+					<div class="b-phone-form">
+						<div class="b-phone">
+							<div class="b-t">替换的手机号（1）</div>
+							<div class="i-list clearfix">
+								<input type="text" class="b-i b-i-phone">
+								<input type="text" class="b-i b-i-num" value="122">
+								<input type="text" class="b-i b-i-status" value="已发送">
+								<div class="bindingBtn">确认绑定</div>
+							</div>
+						</div>
+						<div class="b-phone">
+							<div class="b-t">替换的手机号（2）</div>
+							<div class="i-list clearfix">
+								<input type="text" class="b-i b-i-phone">
+								<input type="text" class="b-i b-i-num" value="122">
+								<input type="text" class="b-i b-i-status" value="已发送">
+								<div class="bindingBtn">确认绑定</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!-- 手机绑定买家 -->
+				<div class="binding-panel binding-buyer" style="display: none;">
+					<div class="topTit">
+						<span>订单编号213124124</span>
+						<span>创建时间：2018-3-21</span>
+						<div class="text-r">替换手机号</div>
+					</div>
+					<div class="b-alter">
+						注：请编辑短信“127864”发送到“1689764000”确认更换手机号
+					</div>
+					<div class="b-phone">
+						<div class="b-t">要替换的手机号（1）</div>
+						<div class="i-list clearfix">
+							<input type="text" class="b-i b-i-phone" placeholder="添加更换手机号">
+							<input type="text" class="b-i b-i-num" value="" placeholder="此手机号需绑定几个账号">
+							<select name="" id="" class="b-i-status b-i">
+								<option value="">未发送</option>
+								<option value="">已发送</option>
+							</select>
+							<div class="bindingBtn">确认绑定</div>
+							<div class="plus-icon">
+								
+							</div>
+						</div>
+					</div>
+					<div class="b-phone">
+						<div class="b-t">要替换的手机号（1）</div>
+						<div class="i-list clearfix">
+							<input type="text" class="b-i b-i-phone" placeholder="添加更换手机号">
+							<input type="text" class="b-i b-i-num" value="" placeholder="此手机号需绑定几个账号">
+							<select name="" id="" class="b-i-status b-i">
+								<option value="">未发送</option>
+								<option value="">已发送</option>
+							</select>
+							<div class="bindingBtn">确认绑定</div>
+							<div class="plus-icon">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 求购管理 -->
+				<div class="purchase panel" style="display: none;">
+					<!-- 求购标题 -->
+					<div class="center-list-title fl">
+						<div class="list-title-top  fl list-text active">
+							全部订单
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top  fl list-text">
+							材料求购
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top  fl list-text">
+							账号求购
+							<div class="white-line"></div>
+						</div>
+						
+						<div class="list-title-bottom fl list-text">
+							<!-- 全部订单列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" >
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									求购数量
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									创建时间
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									商品状态
+								</div>
+							</div>
+							<!-- 材料求购列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" style="display: none;">
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									求购数量
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									创建时间
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									商品状态
+								</div>
+							</div>
+							<!-- 账号列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" style="display: none;">
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									求购数量
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									绑定手机
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									商品状态
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 求购内容 -->
+					<div class="order-list-content fl">
+						<!-- 全部订单 -->
+						<div class="total-order">
+							<div class="select-area">
+								<input type="checkbox" name="" id="">
+								<div class="o-btn fl">全选</div>
+								<div class="o-btn fl">下架</div>
+								<div class=" o-btn publishBtn">立即发布</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<!-- 材料求购 -->
+						<div class="m-p-order" style="display: none;">
+							<div class="select-area">
+								<input type="checkbox" name="" id="">
+								<div class="o-btn fl">全选</div>
+								<div class="o-btn fl">下架</div>
+								<div class=" o-btn publishBtn">立即发布</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<!-- 账号求购 -->
+						<div class="account-p-order" style="display: none;">
+							<div class="select-area">
+								<input type="checkbox" name="" id="">
+								<div class="o-btn fl">全选</div>
+								<div class="o-btn fl">下架</div>
+								<div class=" o-btn publishBtn">立即发布</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												<div class="list-btn">
+													绑定手机号
+												</div>
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 售卖管理 -->
+				<div class="sell panel">
+					<div class="center-list-title fl">
+						<div class="list-title-top  fl list-text active">
+							商品材料
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top  fl list-text">
+							商品账号
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top  fl list-text">
+							订单管理
+							<div class="white-line"></div>
+						</div>
+						
+						<div class="list-title-bottom fl list-text">
+							<!-- 商品材料列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" >
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									求购数量
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									创建时间
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									商品状态
+								</div>
+							</div>
+							<!-- 商品账号列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" style="display: none;">
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									求购数量
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									创建时间
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									商品状态
+								</div>
+							</div>
+							<!-- 订单管理列表头 -->
+							<div class="m-list-tit list-tit fl p-a-list-t" style="display: none;">
+								<div class="list-tit-type1 list-tit-type">
+									商品名称
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									总价
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									库存
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									客服服务
+								</div>
+								<div class="list-tit-type5 list-tit-type">
+									订单状态
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-list-content fl">
+						<!-- 商品材料 -->
+						<div class="total-order">
+							<div class="select-area">
+								<input type="checkbox" name="" id="">
+								<div class="o-btn fl">全选</div>
+								<div class="o-btn fl">下架</div>
+								<div class=" o-btn publishBtn">立即发布</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												<div class="list-btn">
+													绑定手机
+												</div>
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<!-- 商品账号 -->
+						<div class="m-p-order" style="display: none;">
+							<div class="select-area">
+								<input type="checkbox" name="" id="">
+								<div class="o-btn fl">全选</div>
+								<div class="o-btn fl">下架</div>
+								<div class=" o-btn publishBtn">立即发布</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+						<!-- 订单管理 -->
+						<div class="account-p-order" style="display: none;">
+							<div class="btn-tab-w">
+								<div class="m-btn active">材料订单</div>
+								<div class="m-btn">账号订单</div>
+								<div class="m-btn">成功订单</div>
+								<div class="m-btn">代发货</div>
+							</div>
+							<div class="m-order-list">
+								<ul class="list-wrapper">
+									<li class="item-order">
+										<div class="item-order-info p-item-info">
+											<div class="order-number o-text">
+												<input type="checkbox" name="" id="">
+												<span>创建时间：</span><span>2018-4-25-18:00</span>
+											</div>
+											<div class="order-item o-text">
+												<span>订单编号：</span><span>201820182018</span>
+											</div>
+										</div>
+										<div class="order-detail fl m-list-tit">
+											<div class="list-tit-type1 fl list-c-s ">
+												<span class="deal-type fl">【邮寄交易】10万金=0.19元</span>
+												<span class="game-area fl">游戏区服：地下城与勇士/湖北区/湖北三区</span>
+											</div>
+											<div class="list-tit-type2 fl list-c-s list-f">
+												<span>0.19</span>
+												<span>元</span>
+											</div>
+											<div class="list-tit-type3 fl list-c-s list-f o-text2">
+												1
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f">
+												<div class="list-btn">
+													客服服务
+												</div>
+											</div>
+											<div class="list-tit-type4 fl list-c-s list-f-c o-text2">
+												求购中
+												<div class="list-btn">
+													修改
+												</div>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 资金明细 -->
+				<div class="funds-detail panel">
+					<div class="center-list-title fl">
+						<div class="list-title-top m-order fl list-text active">
+							资金明细
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text">
+							提现记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text">
+							充值记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-bottom fl list-text">
+							<!-- 材料订单列表头 -->
+							<div class="f-list-tit list-tit fl " >
+								<div class="list-tit-type1 list-tit-type">
+									订单号
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									时间
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									金额
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									状态
+								</div>
+							</div>
+							<div class="f-order-list">
+								<ul >
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 提现记录 -->
+				<div class="withdraw panel">
+					<div class="center-list-title fl">
+						<div class="list-title-top m-order fl list-text ">
+							资金明细
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text active">
+							提现记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text">
+							充值记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-bottom fl list-text">
+							<!-- 材料订单列表头 -->
+							<div class="f-list-tit list-tit fl " >
+								<div class="list-tit-type1 list-tit-type">
+									订单号
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									时间
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									金额
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									状态
+								</div>
+							</div>
+							<div class="f-order-list">
+								<ul >
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 充值记录 -->
+				<div class="recharge panel">
+					<div class="center-list-title fl">
+						<div class="list-title-top m-order fl list-text ">
+							资金明细
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text ">
+							提现记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-top a-order fl list-text active">
+							充值记录
+							<div class="white-line"></div>
+						</div>
+						<div class="list-title-bottom fl list-text">
+							<!-- 材料订单列表头 -->
+							<div class="f-list-tit list-tit fl " >
+								<div class="list-tit-type1 list-tit-type">
+									订单号
+								</div>
+								<div class="list-tit-type2 list-tit-type">
+									时间
+								</div>
+								<div class="list-tit-type3 list-tit-type">
+									金额
+								</div>
+								<div class="list-tit-type4 list-tit-type">
+									状态
+								</div>
+							</div>
+							<div class="f-order-list">
+								<ul >
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+									<li class="f-list-tit">
+										<div class="list-tit-type1 f-s">
+											1180426777777777
+										</div>
+										<div class="list-tit-type2 f-s">
+											2018-04-26 14:23:23
+										</div>
+										<div class="list-tit-type3 f-s">
+											-0.9
+										</div>
+										<div class="list-tit-type4 f-s">
+											交易完成
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 修改登录密码 -->
+				<div class="reset-login-pw panel reset" style="display: none;">
+					<div class="acount-t t-c">
+						账户设置
+					</div>
+					<div class="a-tablist clearfix">
+						<ul>
+							<li class="active">修改登录密码</li>
+							<li>修改支付密码</li>
+							<li>修改绑定手机</li>
+						</ul>
+					</div>
+					<div class="pw-info clearfix">
+						
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">当前密码：</span>
+							</div>
+							<input type="password" name="" id="" class="a-input fl">
+						</div>
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">新密码：</span>
+							</div>
+							<input type="password" name="" id="" class="a-input fl">
+						</div>
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">确认新密码：</span>
+							</div>
+							<input type="password" name="" id="" class="a-input fl">
+						</div>
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">验证码：</span>
+							</div>
+							<input type="text" name="" id="" class="a-input fl">
+							<div class="code-img fl">
+								<img src="images/code.png" alt="">
+								<span class="t-c">看不清，换一张</span>
+							</div>
+						</div>
+
+						<div class="submit-btn">
+							提交
+						</div>
+					</div>
+				</div>
+				<!-- 修改支付密码 -->
+				<div class="reset-pay-pw panel reset" style="display: none;">
+					<div class="acount-t t-c">
+						账户设置
+					</div>
+					<div class="a-tablist clearfix">
+						<ul>
+							<li>修改登录密码</li>
+							<li class="active">修改支付密码</li>
+							<li>修改绑定手机</li>
+						</ul>
+					</div>
+					<!-- 第一步 -->
+					<div class="reset-step step1 clearfix" >
+						<div class="step-alert clearfix">
+							<div class="step-s active fl">
+								<div class="cir fl">1</div>
+								<div class="s-text fl t-c">验证身份</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s  fl">
+								<div class="cir fl">2</div>
+								<div class="s-text fl t-c">设置支付密码</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s  fl">
+								<div class="cir fl ">3</div>
+								<div class="s-text fl t-c">设置成功</div>
+								
+							</div>
+						</div>
+						<div class="pw-info clearfix">
+
+							<div class="info-list clearfix">
+								<div class="i-text fl">
+									<span class="fr t-c">当前密码：</span>
+								</div>
+								<span class="phone">173****5799</span>
+								<div class="sendcode">
+									发送短信验证码
+								</div>
+							</div>
+
+							<div class="info-list clearfix">
+								<div class="i-text fl">
+									<span class="fr t-c">验证码：</span>
+								</div>
+								<input type="text" name="" id="" class="a-input fl">
+							</div>
+
+							<div class="submit-btn">
+								提交
+							</div>
+						</div>
+					</div>
+					<!-- 第二步 -->
+					<div class="reset-step step2 clearfix" style="display: none;">
+						<div class="step-alert clearfix">
+							<div class="step-s  fl">
+								<div class="cir fl">1</div>
+								<div class="s-text fl t-c">验证身份</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s active fl">
+								<div class="cir fl">2</div>
+								<div class="s-text fl t-c">设置支付密码</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s  fl">
+								<div class="cir fl ">3</div>
+								<div class="s-text fl t-c">设置成功</div>
+								
+							</div>
+						</div>
+						<div class="pw-info clearfix">
+
+							<div class="info-list clearfix">
+								<div class="i-text fl">
+									<span class="fr t-c">新支付密码：</span>
+								</div>
+								<input type="password" name="" id="" class="a-input fl">
+							</div>
+							<div class="info-list clearfix">
+								<div class="i-text fl">
+									<span class="fr t-c">确认支付密码：</span>
+								</div>
+								<input type="password" name="" id="" class="a-input fl">
+								<span class="tag">支付密码必须由6-12位字母和数字混合组成</span>
+							</div>
+
+							<div class="submit-btn">
+								提交
+							</div>
+						</div>
+					</div>
+					<!-- 第三步 -->
+					<div class="reset-step step3 clearfix" style="display: none;">
+						<div class="step-alert clearfix">
+							<div class="step-s  fl">
+								<div class="cir fl">1</div>
+								<div class="s-text fl t-c">验证身份</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s  fl">
+								<div class="cir fl">2</div>
+								<div class="s-text fl t-c">设置支付密码</div>
+								<span class="fl">→</span>
+							</div>
+							<div class="step-s active fl">
+								<div class="cir fl ">3</div>
+								<div class="s-text fl t-c">设置成功</div>
+								
+							</div>
+						</div>
+						<div class="success-alert-w">
+							<div class="success-alert">
+								<img src="images/icon5.png" alt="">
+								<span>恭喜您，支付密码设置成功！</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 修改绑定手机 -->
+				<div class="reset-phone-num panel reset" style="display: none;">
+					<div class="acount-t t-c">
+						账户设置
+					</div>
+					<div class="a-tablist clearfix">
+						<ul>
+							<li>修改登录密码</li>
+							<li >修改支付密码</li>
+							<li class="active">修改绑定手机</li>
+						</ul>
+					</div>
+					<div class="pw-info clearfix">
+
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">当前密码：</span>
+							</div>
+							<span class="phone">173****5799</span>
+							<div class="sendcode">
+								发送短信验证码
+							</div>
+						</div>
+
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">验证码：</span>
+							</div>
+							<input type="text" name="" id="" class="a-input fl">
+						</div>
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">新手机号：</span>
+							</div>
+							<input type="text" name="" id="" class="a-input fl">
+						</div>
+						<div class="info-list clearfix">
+							<div class="i-text fl">
+								<span class="fr t-c">验证码：</span>
+							</div>
+							<input type="text" name="" id="" class="a-input fl">
+							<div class="code-img fl">
+								<img src="images/code.png" alt="">
+								<span class="t-c">看不清，换一张</span>
+							</div>
+						</div>
+
+						<div class="submit-btn">
+							提交
+						</div>
+					</div>
+				</div>
+				<!-- 商家认证 -->
+				<div class="auth-c panel">
+					<div class="auth-w">	
+						<div class="auth-content">
+							<div class="auth-t1">
+								你值得<span class="t-big">信任</span>的工作伙伴！
+							</div>
+							<div class="apply">
+								申请开店
+							</div>
+							<div class="auth-t2">
+								（审核中，1-3个工作日）
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	</html>
